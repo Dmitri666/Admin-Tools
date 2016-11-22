@@ -1,0 +1,171 @@
+{
+  "APP": {
+    "WELCOME": "Welcome to COViS BRiX."
+  },
+  "LOGIN": {
+    "PLEASE_LOG_IN": "Please log in",
+    "SIGN_IN": "Sign in",
+    "RESET_PASSWORD": "Reset password",
+    "VALIDATION_CODE": "Validation code",
+    "MSG_NO_RESOURCES": "You have to be granted access to at least one client.",
+    "NEW_PASSWORD": "New password",
+    "CURRENT_PASSWORD": "Current password",
+    "REPEAT_PASSWORD": "Repeat password",
+    "PASSWORDS_DO_NOT_MATCH": "Passwords do not match.",
+    "MESSAGES": {
+      "USER_ACCOUNT_IS_LOCKED_OUT": "Your account is locked. Please contact an administrator.",
+      "INVALID_USER_NAME_OR_PASSWORD": "Invalid username and/or password. Please verify your login information.",
+      "USER_ACCOUNT_IS_EXPIRED": "Your password has expired. Please set a new password."
+    }
+  },
+  "USER_ADMINISTRATION": {
+    "ADD_ROLE": "Add role",
+    "SEND_PASSWORD_RESET_LINK": "Send password reset link"
+  },
+  "ROLE_ADMINISTRATION": {
+    "ADD_USER": "Add user"
+  },
+  "CLIENT_SELECTION": {
+    "HEADER": "Client selection",
+    "MESSAGE": "Please select one of the following clients",
+    "SELECT": "Select client"
+  },
+  "GENERAL": {
+    "USERNAME": "Username",
+    "PASSWORD": "Password",
+    "CLIENT": "Client",
+    "ADMINISTRATION": "Administration",
+    "MODULES": "Modules",
+    "ACCESS_RIGHTS": "Access rights",
+    "ROLES": "Roles",
+    "USERS": "Users",
+    "UI_ELEMENTS": "UI Elements",
+    "BUSINESS_UNITS": "Business units",
+    "APP_CLIENTS": "Clients",
+    "SYSTEM_CATALOGS": "System catalogs",
+    "SEARCH": "Search",
+    "WORKSPACE": "Workspace",
+    "STATUS": "State",
+    "FILTER": "Filter",
+    "FIRST_NAME": "First name",
+    "LAST_NAME": "Last name",
+    "DEPARTMENT": "Department",
+    "EMAIL": "Email",
+    "JOB_FUNCTION": "Job function",
+    "RESET": "Reset",
+    "ACTIVE": "Active",
+    "REASON": "Reason",
+    "LAST_LOGIN": "Last login",
+    "PROFILE_PICTURE": "Profile picture",
+    "STATE": "State",
+    "BASE_DATA": "Information",
+    "COMMUNICATION_DATA": "Communication info",
+    "PHONE": "Phone",
+    "MOBILE_PHONE": "Phone (mobile)",
+    "FAX": "Fax",
+    "MISC": "Other",
+    "CANCEL": "Cancel",
+    "SALUTATION": "Salutation",
+    "LOCATION": "Location",
+    "RULES": "Rules",
+    "SAVE": "Save",
+    "ASSIGNED_ROLES": "Assigned roles",
+    "AVAILABLE_ROLES": "Available Roles",
+    "NO_DATA_AVAILABLE": "No data available.",
+    "NAME": "Name",
+    "DESCRIPTION": "Description",
+    "ROLE": "Role",
+    "QUICK_SEARCH": "Quick search",
+    "ADVANCED_SEARCH": "Advanced search",
+    "MENU": "Menu",
+    "ID": "ID",
+    "CONFIRM_SELECTION": "Confirm selection",
+    "UPLOAD": "Upload",
+    "PROFILE": "Profile",
+    "SETTINGS": "Settings",
+    "ADDRESS": "Address",
+    "HOME": "Home",
+    "CUSTOMERS": "Customers",
+    "CUSTOMER": "Customer",
+    "URL": "URL",
+    "PICKUP_POINT": "Pickup point"
+  },
+  "ADDRESS": {
+    "STREET": "Street",
+    "HOUSE_NUMBER": "House number",
+    "POSTAL_CODE": "Postal code",
+    "CITY": "City",
+    "COUNTRY": "Country",
+    "SUBCITY": "District"
+  },
+  "TABLE": {
+    "ENTRIES_PER_PAGE": "records per page"
+  },
+  "ACCOUNTSTATE": {
+    "ACTIVE": "Active",
+    "LOCKEDBYADMIN": "Locked by administrator",
+    "LOCKEDBYLOGIN": "Failed login count reached"
+  },
+  "CONFIRMATION": {
+    "DELETE": {
+      "USER": {
+        "TITLE": "Delete user",
+        "CONTENT": "Are you sure you want to delete this user?"
+      },
+      "USERS": {
+        "TITLE": "Delete users",
+        "CONTENT": "Are you sure you want to delete these users?"
+      }
+    },
+    "DISASSOCIATE": {
+      "ROLES": {
+        "TITLE": "Remove roles",
+        "CONTENT": "Are you sure you want to remove these roles?"
+      },
+      "USERS": {
+        "TITLE": "Remove users",
+        "CONTENT": "Are you sure you want to remove these users?"
+      }
+    }
+  },
+  "CUSTOMERS": {
+    "CUSTOMER_ID": "Customer ID",
+    "TITLE": "Title",
+    "GENDER": "Gender",
+    "COMMUNICATION_DATA": "Communication data",
+    "BANK_ACCOUNTS": "Bank accounts",
+    "PICKUP_POINTS": "Pickup points",
+    "PHONE_NUMBERS": "Phone numbers",
+    "ADDRESSES": "Addresses",
+    "REMARK": "Remarks"
+  },
+  "PICKUP_POINTS": {
+    "COLLECTION_GROUP": "Collection group",
+    "MANAGER": "Manager",
+    "MANAGER_TYPE": "Manager type",
+    "LOCATIONS": "Locations",
+    "MOUNTING_LOCATION": "Mounting Location",
+    "TAP_WATER": "Tap water",
+    "SEWAGE": "Sewage",
+    "WATER_CHARGES_BALANCE": "Water charges balance",
+    "WATER_CHARGES_ACCOUNT": "Water charges account",
+    "VOUCHER_ID": "Voucher ID",
+    "BOOKING_TYPE": "Booking type",
+    "BOOKING_AMOUNT": "Amount",
+    "DUE_DATE": "Due date",
+    "BOOKING_DATE": "Booking date"
+  },
+  "BANK_ACCOUNTS": {
+    "BANK": "Bank",
+    "DIRECT_DEBIT": "Direct debit",
+    "DIRECT_DEBIT_FROM": "Direct debit from"
+  },
+  "MESSAGES": {
+    "SAVE_SUCCESS_TITLE": "Save successful",
+    "SAVE_SUCCESS_CONTENT": "The record was saved successfully.",
+    "REMOVAL_SUCCESS_TITLE": "Action successful",
+    "REMOVAL_SUCCESS_CONTENT": "Record(s) successfully removed.",
+    "ASSIGNMENT_SUCCESS_TITLE": "Assignment successful",
+    "ASSIGNMENT_SUCCESS_CONTENT": "The record(s) were successfully assigned."
+  }
+}

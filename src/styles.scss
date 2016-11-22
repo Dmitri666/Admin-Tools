@@ -1,0 +1,114 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("css/brix.css");
+
+
+/**********************************
+    *   ANGULAR MATERIAL
+**********************************/
+
+
+@import '../node_modules/@angular/material/core/core';
+@import '../node_modules/@angular/material/button/button-theme';
+@import '../node_modules/@angular/material/checkbox/checkbox-theme';
+@import '../node_modules/@angular/material/dialog/dialog-theme';
+
+$md-brix-blue: (
+        50: #ffffff,
+        100: #fbfcfe,
+        200: #cce2f4,
+        300: #91bfe8,
+        400: #78b1e2,
+        500: #5fa2dd,
+        600: #4693d8,
+        700: #2d85d2,
+        800: #2775b9,
+        900: #2265a0,
+        A100: #ffffff,
+        A200: #fbfcfe,
+        A400: #78b1e2,
+        A700: #2d85d2,
+        contrast: (
+                50: $black-87-opacity,
+                100: $black-87-opacity,
+                200: $black-87-opacity,
+                300: $black-87-opacity,
+                400: $black-87-opacity,
+                500: white,
+                600: white,
+                700: white,
+                800: $white-87-opacity,
+                900: $white-87-opacity,
+                A100: $black-87-opacity,
+                A200: white,
+                A400: white,
+                A700: white,
+        )
+);
+
+
+$md-brix-orange: (
+        50: #ffffff,
+        100: #ffffff,
+        200: #f9eccf,
+        300: #f1d48f,
+        400: #edc974,
+        500: #eabf59,
+        600: #e7b53e,
+        700: #e3aa23,
+        800: #cd981a,
+        900: #b28417,
+        A100: #ffffff,
+        A200: #ffffff,
+        A400: #edc974,
+        A700: #e3aa23,
+        contrast: (
+                50: $black-87-opacity,
+                100: $black-87-opacity,
+                200: $black-87-opacity,
+                300: $black-87-opacity,
+                400: $black-87-opacity,
+                500: white,
+                600: white,
+                700: white,
+                800: $white-87-opacity,
+                900: $white-87-opacity,
+                A100: $black-87-opacity,
+                A200: white,
+                A400: white,
+                A700: white,
+        )
+);
+
+@include md-core();
+
+$brix-app-primary: md-palette($md-brix-blue);
+$brix-app-accent:  md-palette($md-grey);
+$brix-app-warn:    md-palette($md-brix-orange);
+
+$brix-app-theme: md-light-theme($brix-app-primary, $brix-app-accent, $brix-app-warn);
+$brix-checkbox-theme: md-light-theme($brix-app-accent, $brix-app-primary, $brix-app-warn);
+
+@include md-core-theme($brix-app-theme);
+@include md-button-theme($brix-app-theme);
+@include md-checkbox-theme($brix-checkbox-theme);
+@include md-dialog-theme($brix-checkbox-theme);
+
+[md-raised-button], [md-fab], [md-mini-fab], [md-button], [md-icon-button] {
+  &.small {
+    line-height: 30px;
+    border-radius: 0;
+  }
+
+  &.icon-only{
+    min-width: 33px;
+    border-radius: 0;
+    padding:0;
+  }
+}
+md-checkbox {
+  &.flat {
+    .md-checkbox-frame, .md-checkbox-background {
+      border-radius: 0;
+    }
+  }
+}

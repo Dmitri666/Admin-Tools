@@ -1,0 +1,171 @@
+{
+  "APP": {
+    "WELCOME": "Willkommen in COViS BRiX."
+  },
+  "LOGIN": {
+    "PLEASE_LOG_IN": "Bitte melden Sie sich an",
+    "SIGN_IN": "Anmelden",
+    "RESET_PASSWORD": "Passwort zurücksetzen",
+    "VALIDATION_CODE": "Validierungscode",
+    "MSG_NO_RESOURCES": "Sie müssen für mindestens einen Mandanten der Anwendung freigeschaltet sein.",
+    "NEW_PASSWORD": "Neues Passwort",
+    "CURRENT_PASSWORD": "Aktuelles Passwort",
+    "REPEAT_PASSWORD": "Passwort wiederholen",
+    "PASSWORDS_DO_NOT_MATCH": "Die Passwörter stimmen nicht überein.",
+    "MESSAGES": {
+      "USER_ACCOUNT_IS_LOCKED_OUT": "Ihr Benutzerkonto wurde gesperrt. Bitte wenden Sie sich an einen Administrator.",
+      "INVALID_USER_NAME_OR_PASSWORD": "Ungültiger Benutzername und/oder Passwort. Bitte überprüfen Sie Ihre Eingaben.",
+      "USER_ACCOUNT_IS_EXPIRED": "Ihr Passwort ist abgelaufen. Bitte setzen Sie ein neues Passwort."
+    }
+  },
+  "USER_ADMINISTRATION": {
+    "ADD_ROLE": "Rolle hinzufügen",
+    "SEND_PASSWORD_RESET_LINK": "Passwortrücksetzungslink senden"
+  },
+  "ROLE_ADMINISTRATION": {
+    "ADD_USER": "Benutzer hinzufügen"
+  },
+  "CLIENT_SELECTION": {
+    "HEADER": "Mandantenauswahl",
+    "MESSAGE": "Bitte wählen Sie einen der verfügbaren Mandanten",
+    "SELECT": "Mandant auswählen"
+  },
+  "GENERAL": {
+    "USERNAME": "Benutzername",
+    "PASSWORD": "Passwort",
+    "CLIENT": "Mandant",
+    "ADMINISTRATION": "Administration",
+    "MODULES": "Modules",
+    "ACCESS_RIGHTS": "Berechtigungen",
+    "ROLES": "Rollen",
+    "USERS": "Benutzer",
+    "UI_ELEMENTS": "UI Elemente",
+    "BUSINESS_UNITS": "Organisationseinheiten",
+    "APP_CLIENTS": "Mandanten",
+    "SYSTEM_CATALOGS": "System-Kataloge",
+    "SEARCH": "Suche",
+    "WORKSPACE": "Arbeitsplatz",
+    "STATUS": "Status",
+    "FILTER": "Filter",
+    "FIRST_NAME": "Vorname",
+    "LAST_NAME": "Nachname",
+    "DEPARTMENT": "Abteilung",
+    "EMAIL": "E-Mail",
+    "JOB_FUNCTION": "Funktion",
+    "RESET": "Zurücksetzen",
+    "ACTIVE": "Aktiv",
+    "REASON": "Grund",
+    "LAST_LOGIN": "Letzter Login",
+    "PROFILE_PICTURE": "Profilbild",
+    "STATE": "Status",
+    "BASE_DATA": "Stammdaten",
+    "COMMUNICATION_DATA": "Kommunikationsdaten",
+    "PHONE": "Telefon",
+    "MOBILE_PHONE": "Telefon (mobil)",
+    "FAX": "Fax",
+    "MISC": "Sonstiges",
+    "CANCEL": "Abbrechen",
+    "SALUTATION": "Anrede",
+    "LOCATION": "Standort",
+    "RULES": "Regeln",
+    "SAVE": "Speichern",
+    "ASSIGNED_ROLES": "Zugewiesene Rollen",
+    "AVAILABLE_ROLES": "Vorhandene Rollen",
+    "NO_DATA_AVAILABLE": "Keine Daten vorhanden.",
+    "NAME": "Name",
+    "DESCRIPTION": "Beschreibung",
+    "ROLE": "Rolle",
+    "QUICK_SEARCH": "Schnellsuche",
+    "ADVANCED_SEARCH": "Erweiterte Suche",
+    "MENU": "Menü",
+    "ID": "ID",
+    "CONFIRM_SELECTION": "Auswahl bestätigen",
+    "UPLOAD": "Hochladen",
+    "PROFILE": "Profil",
+    "SETTINGS": "Einstellungen",
+    "ADDRESS": "Adresse",
+    "HOME": "Home",
+    "CUSTOMERS": "Kunden",
+    "CUSTOMER": "Kunde",
+    "URL": "URL",
+    "PICKUP_POINT": "Abnahmestelle"
+  },
+  "ADDRESS": {
+    "STREET": "Straße",
+    "HOUSE_NUMBER": "Hausnummer",
+    "POSTAL_CODE": "PLZ",
+    "CITY": "Ort",
+    "COUNTRY": "Land",
+    "SUBCITY": "Ortsteil"
+  },
+  "TABLE": {
+    "ENTRIES_PER_PAGE": "Einträge pro Seite"
+  },
+  "ACCOUNTSTATE": {
+    "ACTIVE": "Aktiv",
+    "LOCKEDBYADMIN": "Durch Administrator gesperrt",
+    "LOCKEDBYLOGIN": "Anzahl Fehlversuche erreicht"
+  },
+  "CONFIRMATION": {
+    "DELETE": {
+      "USER": {
+        "TITLE": "Benutzer löschen",
+        "CONTENT": "Sind Sie sicher, dass Sie diesen Benutzer löschen möchten?"
+      },
+      "USERS": {
+        "TITLE": "Benutzer löschen",
+        "CONTENT": "Sind Sie sicher, dass Sie diese Benutzer löschen möchten?"
+      }
+    },
+    "DISASSOCIATE": {
+      "ROLES": {
+        "TITLE": "Rollen entfernen",
+        "CONTENT": "Sind Sie sicher, dass Sie diese Rollen entfernen möchten?"
+      },
+      "USERS": {
+        "TITLE": "Benutzer entfernen",
+        "CONTENT": "Sind Sie sicher, dass Sie diese Benutzer entfernen möchten?"
+      }
+    }
+  },
+  "CUSTOMERS": {
+    "CUSTOMER_ID": "Kundennummer",
+    "TITLE": "Titel",
+    "GENDER": "Geschlecht",
+    "COMMUNICATION_DATA": "Kommunikationsdaten",
+    "BANK_ACCOUNTS": "Bankverbindungen",
+    "PICKUP_POINTS": "Abnahmestellen",
+    "PHONE_NUMBERS": "Telefonnummern",
+    "ADDRESSES": "Adressen",
+    "REMARK": "Anmerkungen"
+  },
+  "PICKUP_POINTS": {
+    "COLLECTION_GROUP": "Mahngruppe",
+    "MANAGER": "Verwalter",
+    "MANAGER_TYPE": "Verwaltertyp",
+    "LOCATIONS": "Standorte",
+    "MOUNTING_LOCATION": "Einbauort",
+    "TAP_WATER": "Trinkwasser",
+    "SEWAGE": "Abwasser",
+    "WATER_CHARGES_BALANCE": "Wassergeldsaldo",
+    "WATER_CHARGES_ACCOUNT": "Wassergeldkonto",
+    "VOUCHER_ID": "Belegnummer",
+    "BOOKING_TYPE": "Buchungstyp",
+    "BOOKING_AMOUNT": "Betrag",
+    "DUE_DATE": "Fälligkeitsdatum",
+    "BOOKING_DATE": "Buchungsdatum"
+  },
+  "BANK_ACCOUNTS": {
+    "BANK": "Bank",
+    "DIRECT_DEBIT": "Lastschrift",
+    "DIRECT_DEBIT_FROM": "Lastschrift vom"
+  },
+  "MESSAGES": {
+    "SAVE_SUCCESS_TITLE": "Speicherung erfolgreich",
+    "SAVE_SUCCESS_CONTENT": "Der Datensatz wurde erfolgreich gespeichert.",
+    "REMOVAL_SUCCESS_TITLE": "Löschung erfolgreich",
+    "REMOVAL_SUCCESS_CONTENT": "Der/Die Datensatz/Datensätze wurde(n) erfolgreich entfernt.",
+    "ASSIGNMENT_SUCCESS_TITLE": "Zuweisung erfolgreich",
+    "ASSIGNMENT_SUCCESS_CONTENT": "Der/Die Datensatz/Datensätze wurde(n) erfolgreich zugewiesen."
+  }
+}
