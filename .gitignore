@@ -38,6 +38,10 @@ testem.log
 /src/**/*.js
 /src/**/*.map
 
+# admin
+/admin/**/*.js
+/admin/**/*.map
+
 #System Files
 .DS_Store
 Thumbs.db
