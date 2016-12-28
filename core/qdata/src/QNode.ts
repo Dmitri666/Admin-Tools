@@ -37,5 +37,7 @@ export enum BinaryType {
     Contains = 7,
     StartsWith = 8,
     EndsWith = 9,
-    In = 10
+    In = 10,
+    Take = 11,
+    Skip = 12
 }

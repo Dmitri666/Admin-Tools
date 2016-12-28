@@ -15,10 +15,6 @@ const appRoutes: Routes = [
                 data: {
                     title : 'GENERAL.HOME'
                 }
-            },
-            {
-                path: 'admin',
-                loadChildren: './../../admin/admin.module#AdminModule'
             }
         ]
     }

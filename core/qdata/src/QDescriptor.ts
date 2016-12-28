@@ -6,6 +6,7 @@ import {QNode} from './QNode';
 export class QDescriptor {
   Root: QNode;
   Include: Array<QNode>;
+  IsProjection: boolean;
 
   constructor() {
     this.Include = [];
