@@ -7,17 +7,19 @@ import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 import { TransactionsComponent } from './transactions/transactions.component';
-import {DataService} from '../../core/qdata/src/DataService';
 import {QDataModule} from "../../core/qdata/index";
 import { HomeComponent } from './home/home.component';
-import { transactionsReducer } from './reducers/transactionsReducer';
+import {contactsReducer} from "./reducers/contactsReducer";
+import {ContactsService} from "./services/contacts.service";
+import {ContactsList} from "./transactions/contacts-list.component";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TransactionsComponent,
-    HomeComponent
+    HomeComponent,
+    ContactsList
   ],
   imports: [
     BrowserModule,
@@ -25,9 +27,9 @@ import { transactionsReducer } from './reducers/transactionsReducer';
     HttpModule,
     QDataModule,
     routing,
-    StoreModule.provideStore({ counter: transactionsReducer })
+    StoreModule.provideStore({contactsReducer })
   ],
-  providers: [DataService],
+  providers: [ContactsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

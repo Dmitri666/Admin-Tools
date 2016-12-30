@@ -3,6 +3,13 @@ import {TransactionsViewModel} from './TransactionViewModel';
 import {Model} from './Model';
 import {DataService} from '../../../core/qdata/src/DataService';
 import {GlobalSettings} from "../constants/global-settings";
+import {ContactsService} from "../services/contacts.service";
+import {Observable} from "rxjs";
+import {ContactDto} from "../model/generated/ContactDto";
+import {QDescriptor} from "../../../core/qdata/src/QDescriptor";
+import {TableView} from "./TableView";
+import {QDescriptorBuilder} from "../../../core/qdata/src/QDescriptorBuilder";
+import {NodeType} from "../../../core/qdata/src/QNode";
 
 @Component({
   selector: 'app-transactions',
@@ -10,14 +17,31 @@ import {GlobalSettings} from "../constants/global-settings";
   styleUrls: ['./transactions.component.css']
 })
 export class TransactionsComponent implements OnInit {
-  public viewModel: TransactionsViewModel;
-  constructor(private dataService: DataService) {
-    let dataModel = new Model(dataService, GlobalSettings.API_ENDPOINT + '/contact');
-    this.viewModel = new TransactionsViewModel(dataModel);
-    this.viewModel.refresh();
+  contacts: Observable<Array<ContactDto>>;
+  service: ContactsService;
+  filter: any;
+
+  constructor(service: ContactsService) {
+    this.service = service;
+    this.contacts = this.service.contacts;
+    this.filter = {};
+    this.refresh();
+
   }
 
   ngOnInit() {
   }
 
+  getQueryDescriptor():QDescriptor {
+    let builder = new QDescriptorBuilder<ContactDto>();
+    
+    let descriptor = builder.getQDescriptor();
+    return descriptor;
+  }
+
+  refresh(){
+    this.service.loadItems(this.getQueryDescriptor());
+  }
 }
+
+

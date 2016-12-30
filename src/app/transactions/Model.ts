@@ -4,6 +4,7 @@ import {TableView} from './TableView';
 import {ContactDto} from '../model/generated/ContactDto';
 import {DataService} from '../../../core/qdata/src/DataService';
 import {QDescriptorBuilder} from "../../../core/qdata/src/QDescriptorBuilder";
+import {QDescriptorProjectionBuilder} from "../../../core/qdata/src/QDescriptorProjectionBuilder";
 
 export class Model extends DataModel<TableView, ContactDto> {
   constructor(dataService: DataService, url: string) {
@@ -11,13 +12,13 @@ export class Model extends DataModel<TableView, ContactDto> {
   }
 
   getQuery(): QNode {
-    let builder = new QDescriptorBuilder<TableView,ContactDto>();
+    let builder = new QDescriptorProjectionBuilder<TableView,ContactDto>();
     builder.addBinding(x => x.name, x => x.firstName);
     builder.addBinding(x => x.nachname, x => x.lastName);
     builder.addBinding(x => x.firma, x => x.customer.firma11);
     builder.addBinding(x => x.firma1, x => x.customer.firma21);
 
-    return builder.getQuery();
+    return null;//builder.getQuery();
   }
 
 

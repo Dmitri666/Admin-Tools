@@ -4,7 +4,7 @@
       <div class="group">
         <label for="firma" class="col-3">firma</label>
         <div class="col-9">
-          <input type="text" id="firma" [(ngModel)]="viewModel.filter['firma']"
+          <input type="text" id="firma"
                  name="firma">
         </div>
       </div>
@@ -13,7 +13,7 @@
       <div class="group">
         <label for="firma1" class="col-3">firma1</label>
         <div class="col-9">
-          <input type="text" id="firma1" [(ngModel)]="viewModel.filter['firma1']"
+          <input type="text" id="firma1"
                  name="firma1">
         </div>
       </div>
@@ -22,7 +22,7 @@
       <div class="group">
         <label for="vorname" class="col-3">vorname</label>
         <div class="col-9">
-          <input type="text" id="vorname" [(ngModel)]="viewModel.filter['vorname']"
+          <input type="text" id="vorname"  [(ngModel)]="filter['vorname']"
                  name="vorname">
         </div>
       </div>
@@ -31,7 +31,7 @@
       <div class="group">
         <label for="nachname" class="col-3">nachname</label>
         <div class="col-9">
-          <input type="text" id="nachname" [(ngModel)]="viewModel.filter['nachname']"
+          <input type="text" id="nachname"
                  name="nachname">
         </div>
       </div>
@@ -40,7 +40,7 @@
   <div class="row">
     <div class="col-12">
       <div style="float: right">
-        <button md-raised-button color="primary" class="small" (click)="viewModel.refresh()" type="button">SEARCH</button>
+        <button md-raised-button color="primary" class="small" (click)="refresh()" type="button">SEARCH</button>
 
       </div>
     </div>
@@ -48,29 +48,9 @@
 
 </div>
 
-
-<table class="table table-striped">
-  <thead class="blue">
-  <tr>
-
-    <th *ngFor="let value of viewModel.sorting" (click)="viewModel.sort(value)">{{value}}</th>
+<div *ngFor="let item of contacts | async">
+     {{item.firstName}}
+</div>
 
 
-  </tr>
-  </thead>
-  <tbody>
 
-  <tr *ngFor="let item of viewModel.data; let i = index;">
-    <td *ngFor="let value of item.values">{{value}}</td>
-  </tr>
-
-
-  </tbody>
-  <tfoot>
-  <tr>
-    <td colspan="4">
-      <!--<mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>-->
-    </td>
-  </tr>
-  </tfoot>
-</table>

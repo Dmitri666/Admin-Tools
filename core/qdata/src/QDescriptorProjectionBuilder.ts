@@ -12,16 +12,32 @@ import {QBinding} from "./QBinding";
 require('rxjs/add/operator/map');
 
 
-export class QDescriptorBuilder<TM extends IModelEntity> {
+export class QDescriptorProjectionBuilder<TP extends IProjection, TM extends IModelEntity> {
     private query: QNode;
     private filters: Array<QNode>;
     private includes: string[];
     private sortingNodes: Map<string, QNode>;
+    private projectionNodes: Map<string, QNode>;
     constructor() {
         this.includes = [];
         this.filters = [];
         this.sortingNodes = new Map<string, QNode>();
-        this.query = {Type: NodeType.Querable, Value: ''}
+        this.projectionNodes = new Map<string, QNode>();
+    }
+
+    addBinding(p: ((x: TP) => void), m: ((x: TM) => void)) {
+        let property = this.convertLambdaToPath(p);
+        let memberPath = this.convertLambdaToPath(m);
+        let members = memberPath.split('.');
+        let member:QNode = {Type: NodeType.Method,Value: members[0]};
+        this.projectionNodes.set(property,member);
+        for(let i = 1; i < members.length; i++){
+            let parent = {Type:NodeType.Member,Value:members[i]};
+            member.Left = parent;
+            member = parent;
+            this.projectionNodes.set(property,member);
+        }
+
     }
 
     addSorting(property: string) {
@@ -45,7 +61,7 @@ export class QDescriptorBuilder<TM extends IModelEntity> {
         }
     }
 
-    addFilter(path: (x: TM) => any, op: BinaryType, value: any) {
+    addFilter(path: (x: TP) => any, op: BinaryType, value: any) {
         this.filters.push({
             Type: NodeType.Binary,
             Value: op,
@@ -91,14 +107,6 @@ export class QDescriptorBuilder<TM extends IModelEntity> {
           root = node;
         });
         return root;
-    }
-
-    public getQDescriptor() {
-      let root = this.buildQuery();
-      let descriptor: QDescriptor = new QDescriptor();
-      descriptor.IsProjection = false;
-      descriptor.Root = root;
-      return descriptor;
     }
 
     protected resetModel() {
