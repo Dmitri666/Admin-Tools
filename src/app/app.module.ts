@@ -6,20 +6,23 @@ import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
-import { TransactionsComponent } from './transactions/transactions.component';
+import { ContactsComponent } from './transactions/contacts.component';
 import {QDataModule} from "../../core/qdata/index";
 import { HomeComponent } from './home/home.component';
 import {contactsReducer} from "./reducers/contactsReducer";
 import {ContactsService} from "./services/contacts.service";
-import {ContactsList} from "./transactions/contacts-list.component";
+import {ItemDetail} from "./transactions/item-detail.component";
+import {ItemsList} from "./transactions/items-list.component";
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TransactionsComponent,
+    ContactsComponent,
     HomeComponent,
-    ContactsList
+    ItemDetail,
+    ItemsList
   ],
   imports: [
     BrowserModule,
