@@ -18,6 +18,7 @@ export abstract class ViewModel<TP extends IProjection>  {
     protected abstract configureFilterMap(): Map<string, Function>;
 
 
+
     private applyFilterState() {
         let filters = Object.getOwnPropertyNames(this.filter);
         for (let i = 0; i < filters.length; i++) {
