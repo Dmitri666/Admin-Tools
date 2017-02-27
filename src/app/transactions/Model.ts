@@ -36,7 +36,7 @@ export class Model extends DataModel<TableView, ContactDto> {
             }
         }
         projection.Left = query;
-        return projection;
+        return query;
     }
 
 

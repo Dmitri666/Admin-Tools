@@ -46,12 +46,6 @@ export abstract class ViewModel<TP extends IProjection>  {
 
     refresh() {
         this.applyFilterState();
-        this.model.refresh().subscribe(
-            data => {
-                this.data = data;
-                if (this.sorting.length === 0) {
-                    this.sorting = data[0].properties;
-                }
-            });
+        this.model.refresh();
     }
 }

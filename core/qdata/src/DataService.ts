@@ -25,4 +25,12 @@ export class DataService {
 
       });
   }
+
+  public getAll<T>(query: QDescriptor, url: string): Observable<Array<T>> {
+    let body = JSON.stringify(query);
+    let headers = new Headers({'Content-Type': 'application/json'});
+    let options = new RequestOptions({headers: headers});
+    return this.http.post(url, body, options)
+      .map(res => res.json());
+  }
 }

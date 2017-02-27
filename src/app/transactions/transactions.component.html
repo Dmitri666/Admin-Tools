@@ -22,7 +22,7 @@
       <div class="group">
         <label for="vorname" class="col-3">vorname</label>
         <div class="col-9">
-          <input type="text" id="vorname" [(ngModel)]="viewModel.filter['vorname']"
+          <input type="text" id="vorname" [(ngModel)]="selectedContact$"
                  name="vorname">
         </div>
       </div>
@@ -31,7 +31,7 @@
       <div class="group">
         <label for="nachname" class="col-3">nachname</label>
         <div class="col-9">
-          <input type="text" id="nachname" [(ngModel)]="viewModel.filter['nachname']"
+          <input type="text" id="nachname" [(ngModel)]="selectedContact$.nachname"
                  name="nachname">
         </div>
       </div>
@@ -40,7 +40,8 @@
   <div class="row">
     <div class="col-12">
       <div style="float: right">
-        <button md-raised-button color="primary" class="small" (click)="viewModel.refresh()" type="button">SEARCH</button>
+        <button md-raised-button color="primary" class="small" (click)="load()" type="button">SEARCH</button>
+        <button md-raised-button color="primary" class="small" (click)="add()" type="button">ADD</button>
 
       </div>
     </div>
@@ -51,17 +52,13 @@
 
 <table class="table table-striped">
   <thead class="blue">
-  <tr>
 
-    <th *ngFor="let value of viewModel.sorting" (click)="viewModel.sort(value)">{{value}}</th>
-
-
-  </tr>
   </thead>
   <tbody>
 
-  <tr *ngFor="let item of viewModel.data; let i = index;">
-    <td *ngFor="let value of item.values">{{value}}</td>
+  <tr *ngFor="let item of customers$ | async; let i = index;">
+    <td>{{item.id}}</td>
+    <td *ngFor="let cont of item.contacts" (click)="select(item,cont)">{{cont.firstName}}</td>
   </tr>
 
 
