@@ -9,17 +9,18 @@ import { TransactionsComponent } from './transactions/transactions.component';
 import {DataService} from '../../core/qdata/src/DataService';
 import {QDataModule} from "../../core/qdata/index";
 import { HomeComponent } from './home/home.component';
-import {AdminModule} from "../../admin/admin.module";
 import {StoreModule} from "@ngrx/store";
 import {RouterStoreModule} from "@ngrx/router-store";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import { reducer } from './reducers';
+import {IndexPipe} from "./transactions/indexPipe";
 
 @NgModule({
   declarations: [
     AppComponent,
     TransactionsComponent,
-    HomeComponent
+    HomeComponent,
+    IndexPipe
   ],
   imports: [
     BrowserModule,
@@ -27,7 +28,7 @@ import { reducer } from './reducers';
     HttpModule,
     QDataModule,
     routing,
-    AdminModule,
+
     /**
      * StoreModule.provideStore is imported once in the root module, accepting a reducer
      * function or object map of reducer functions. If passed an object of

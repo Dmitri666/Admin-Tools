@@ -28,7 +28,7 @@ export class LoadAction implements Action {
   type = ActionTypes.LOAD;
 
 
-  constructor(public payload: Array<CustomerDto>) { }
+  constructor(public payload: CustomerDto[]) { }
 }
 
 export class SelectContactAction implements Action {

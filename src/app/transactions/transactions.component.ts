@@ -10,7 +10,7 @@ import {QDescriptor} from "../../../core/qdata/src/QDescriptor";
 import {ContactDto} from "../model/generated/ContactDto";
 import {NodeType, QNode} from "../../../core/qdata/src/QNode";
 import {Observable} from "rxjs";
-import {getLoadedContacts, AppState, selectedContactSelector} from "../reducers/index";
+import {getAll, AppState, getContactByCustomers} from "../reducers/index";
 import {CustomerDto} from "../model/generated/CustomerDto";
 
 @Component({
@@ -21,6 +21,7 @@ import {CustomerDto} from "../model/generated/CustomerDto";
 export class TransactionsComponent implements OnInit {
   public viewModel: TransactionsViewModel;
   customers$: Observable<Array<CustomerDto>>;
+  contactByCustomers$: Observable<{[customerId:number]:Array<number>}>;
   selectedContact$: Observable<ContactDto>;
 
   constructor(private dataService: DataService,private store: Store<AppState>) {
@@ -28,11 +29,14 @@ export class TransactionsComponent implements OnInit {
     this.viewModel = new TransactionsViewModel(dataModel);
     //this.viewModel.refresh();
 
-    this.customers$ = store.select(getLoadedContacts);
-    //this.customers$.subscribe(res => console.log(res));
+    this.customers$ = store.select(getAll);
+    this.contactByCustomers$ = store.select(getContactByCustomers);
+    this.contactByCustomers$.subscribe(res =>
+      console.log(res)
+    );
 
-    this.selectedContact$ = store.select(selectedContactSelector);
-    this.selectedContact$.subscribe(res => console.log(res));
+    //this.selectedContact$ = store.select(selectedContactSelector);
+    //this.selectedContact$.subscribe(res => console.log(res));
   }
 
   ngOnInit() {

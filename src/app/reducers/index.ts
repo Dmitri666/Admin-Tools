@@ -41,6 +41,9 @@ import {ContactDto} from "../model/generated/ContactDto";
 import {CustomersContainer} from "../model/generated/CustomersContainer";
 import {CustomerDto} from "../model/generated/CustomerDto";
 import {isNullOrUndefined} from "util";
+import {getAllCustomers} from "./customers";
+import {getAllContacts} from "./customers";
+import {getContactsByCustomerId} from "./customers";
 
 export interface AppState {
   collection: customers.State;
@@ -70,14 +73,8 @@ export function reducer(state: any, action: any) {
   }
 }
 
-export const getLoadedContacts = createSelector<AppState,Array<CustomerDto>,customers.State>((state: AppState) => state.collection, (state: customers.State) => state.container.customers);
+export const getAll = createSelector((state:AppState) => state.collection, getAllCustomers);
+export const getContactByCustomers = createSelector((state:AppState) => state.collection, getContactsByCustomerId);
 
-export const selectedContactSelector = createSelector<AppState,ContactDto,customers.State>((state: AppState) => state.collection,
-  (state: customers.State) => {
-      let customer = state.container.customers.find(c => c.id === state.selectedCustomerId);
-      if(isNullOrUndefined(customer)) {
-        return null;
-      }
-      return customer.contacts.find(c => c.id === state.selectedContactId);
-});
+
 

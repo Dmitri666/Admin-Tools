@@ -1,7 +1,7 @@
 import {Routes, RouterModule} from '@angular/router';
-import {ContactsComponent} from './transactions/contacts.component';
 import {ModuleWithProviders} from '@angular/core';
 import {HomeComponent} from "./home/home.component";
+import {TransactionsComponent} from "./transactions/transactions.component";
 
 
 const appRoutes: Routes = [
@@ -10,8 +10,8 @@ const appRoutes: Routes = [
         component: HomeComponent,
         children: [
             {
-                path: 'contacts',
-                component: ContactsComponent,
+                path: 'customers',
+                component: TransactionsComponent,
                 data: {
                     title : 'GENERAL.HOME'
                 }
